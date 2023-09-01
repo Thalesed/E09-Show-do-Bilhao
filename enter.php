@@ -50,7 +50,7 @@
                     setcookie("login", $user);
                     echo "<p>usuario autenticado: " . $user . "</p>";
                     $conn->close();
-                    header('Location:  /?' . http_build_query($dados));
+                    header('Location:  /');
                 }else{
                     setcookie("login", "a");
                     echo "Usuário ou senha incorretos";
@@ -66,7 +66,7 @@
     }
 
     echo $_COOKIE["login"];
-    header('Location:  /?' . http_build_query($dados));
+    header('Location:  /');
 
     echo "Usuário ou senha incorretos"; 
     
